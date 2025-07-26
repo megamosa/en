@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MagoArab OrderEnhancer Admin Configuration
+ *
+ * @category    MagoArab
+ * @package     MagoArab_OrderEnhancer
+ * @author      MagoArab Team
+ * @copyright   Copyright (c) 2024 MagoArab
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magoarab" translate="label" sortOrder="200">
+            <label>MagoArab</label>
+        </tab>
+        <section id="order_enhancer" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Order Enhancer</label>
+            <tab>magoarab</tab>
+            <resource>MagoArab_OrderEnhancer::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="enable_excel_export" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Excel Export Enhancer</label>
+                    <comment>Enable enhanced Excel export with product details and proper encoding</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enable_governorate_filter" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Governorate Filter</label>
+                    <comment>Enable filtering orders by customer governorate/region</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enable_product_columns" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Product Columns in Order Grid</label>
+                    <comment>Add SKU and Product Name columns to order grid</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

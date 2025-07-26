@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * MagoArab OrderEnhancer Order Grid UI Component
+ *
+ * @category    MagoArab
+ * @package     MagoArab_OrderEnhancer
+ * @author      MagoArab Team
+ * @copyright   Copyright (c) 2024 MagoArab
+ */
+-->
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <columns name="sales_order_columns">
+        <column name="governorate" sortOrder="150">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">المحافظة</label>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="customer_phone" sortOrder="152">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Customer Phone</label>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="total_products_ordered" sortOrder="155">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">اجمالي المنتجات المطلوبة</label>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="customer_note" sortOrder="157">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">ملاحظات العميل</label>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="product_names" sortOrder="160">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Product Names</label>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="product_skus" sortOrder="170">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Product SKUs</label>
+                <visible>true</visible>
+            </settings>
+        </column>
+    </columns>
+</listing>

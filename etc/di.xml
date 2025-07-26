@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MagoArab OrderEnhancer Dependency Injection Configuration
+ *
+ * @category    MagoArab
+ * @package     MagoArab_OrderEnhancer
+ * @author      MagoArab Team
+ * @copyright   Copyright (c) 2024 MagoArab
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Plugin for Excel Export Enhancement - Multiple Classes -->
+    <type name="Magento\Ui\Model\Export\ConvertToCsv">
+        <plugin name="magoarab_order_enhancer_excel_export" type="MagoArab\OrderEnhancer\Plugin\ExcelExportPlugin" sortOrder="10"/>
+    </type>
+    
+    <type name="Magento\Ui\Model\Export\ConvertToXml">
+        <plugin name="magoarab_order_enhancer_xml_export" type="MagoArab\OrderEnhancer\Plugin\ExcelExportPlugin" sortOrder="10"/>
+    </type>
+    
+    <type name="Magento\ImportExport\Model\Export">
+        <plugin name="magoarab_order_enhancer_import_export" type="MagoArab\OrderEnhancer\Plugin\ExcelExportPlugin" sortOrder="10"/>
+    </type>
+    
+    <!-- Plugin for Order Grid Enhancement -->
+    <type name="Magento\Sales\Model\ResourceModel\Order\Grid\Collection">
+        <plugin name="magoarab_order_enhancer_grid" type="MagoArab\OrderEnhancer\Plugin\OrderGridPlugin" sortOrder="10"/>
+    </type>
+</config>
